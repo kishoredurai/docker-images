@@ -16,5 +16,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Terminal Docker image
       run: docker build . --file dockerfile-ubuntu-terminal --tag kishoredurai/ubuntu-apps:terminal-1.01.1
-    - name: Push the Terminal Docker image
+    - name: Push the Terminal Docker images
       run:  docker login -u kishoredurai -p ${{ secrets.DOCKER_TOKEN }} && docker push kishoredurai/ubuntu-apps:terminal-1.01.1
